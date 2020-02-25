@@ -8,8 +8,9 @@
         <module>SBE_Java8Feature</module>
         <module>SBE_Customer</module>
         <module>SBE_WebThymeleaf</module>
-        <module>SBE_Moving_1</module>
-        <module>SBE_Moving_2</module>
+        <module>SBE_Remote_Client</module>
+        <module>SBE_Remote_Server</module>
+        <module>SBE_HttpSession</module>
     </modules>
 
     <parent>
@@ -48,18 +49,6 @@
         <!--            <groupId>org.springframework.boot</groupId>-->
         <!--            <artifactId>spring-boot-starter-actuator</artifactId>-->
         <!--        </dependency>-->
-
-        <!-- Spring Boot : Java Persist API -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <!-- Hypersonic2 : Embed DB -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-        </dependency>
 
         <!-- Spring Boot : Rest Repositories -->
         <dependency>
