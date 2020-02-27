@@ -7,7 +7,6 @@
     <modules>
         <module>SBE_Java8Feature</module>
         <module>SBE_Customer</module>
-        <module>SBE_WebThymeleaf</module>
         <module>SBE_Remote_Client</module>
         <module>SBE_Remote_Server</module>
         <module>SBE_HttpSession</module>
