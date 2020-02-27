@@ -44,12 +44,6 @@
     </dependencyManagement>
 
     <dependencies>
-        <!-- Spring Boot : Monitor, Management -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-actuator</artifactId>-->
-        <!--        </dependency>-->
-
         <!-- Spring Boot : Rest Repositories -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

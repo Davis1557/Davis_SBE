@@ -10,13 +10,11 @@ import tw.com.aitc.SBE.HTTP_INVOKER.HelloService;
 public class HelloServiceTests {
 
 	@Autowired
-	ApplicationContext context;
-
-	@Autowired
 	HelloService helloService;
 
 	@Test
 	void sayHello() {
-		System.out.println("Remote Hello : " + helloService.sayHello());
+		System.out.println(helloService.getClass().getName());
+//		System.out.println("Remote Hello : " + helloService.sayHello());
 	}
 }

@@ -12,7 +12,7 @@ public class ServerMain {
 		try {
 			Hello helloWorld = new HelloWorld();
 
-			Registry registry = LocateRegistry.createRegistry(9999);
+			LocateRegistry.createRegistry(9999);
 
 			Naming.bind("rmi://localhost:9999/hello", helloWorld);
 

@@ -1,4 +1,4 @@
-package tw.com.aitc.SBE.WebThymeleaf;
+package tw.com.aitc.SBE.httpSession;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -7,6 +7,11 @@ import org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter;
 
 @Configuration
 public class HttpInvokerConfiguration {
+	@Bean(name = "/ww")
+	public WWInvoker ww() {
+		return new WWInvoker();
+	}
+
 	@Bean
 	public HelloService helloService() {
 		return new HelloWorld();
@@ -15,9 +20,9 @@ public class HttpInvokerConfiguration {
 	@Bean(name = "/helloService")
 	@Autowired
 	public HttpInvokerServiceExporter httpHelloService(HelloService helloService) {
-		HttpInvokerServiceExporter http = new HttpInvokerServiceExporter();
-		http.setServiceInterface(HelloService.class);
-		http.setService(helloService);
-		return http;
+		HttpInvokerServiceExporter exporter = new HttpInvokerServiceExporter();
+		exporter.setServiceInterface(HelloService.class);
+		exporter.setService(helloService);
+		return exporter;
 	}
 }
