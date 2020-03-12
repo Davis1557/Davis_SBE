@@ -38,18 +38,18 @@ public class SessionRestControllerTest {
 
 		System.out.println("Session is New ? " + session.isNew());
 
-//		mockMvc.perform(
-//				post("/hello")
-//						.contentType(APPLICATION_JSON)
-//						.characterEncoding("UTF8")
-//						.session(session)
-//						.content("{\"word\" : \"x2\"}")
-//						.accept(APPLICATION_JSON)
-//		)
-//				.andDo(MockMvcResultHandlers.print())
-//				.andExpect(status().isOk())
-//				.andReturn();
-//
-//		System.out.println("Session is New ? " + session.isNew());
+		mockMvc.perform(
+				post("/hello")
+						.contentType(APPLICATION_JSON)
+						.characterEncoding("UTF8")
+						.session(session)
+						.content("{\"word\" : \"x2\"}")
+						.accept(APPLICATION_JSON)
+		)
+				.andDo(MockMvcResultHandlers.print())
+				.andExpect(status().isOk())
+				.andReturn();
+
+		System.out.println("Session is New ? " + session.isNew());
 	}
 }

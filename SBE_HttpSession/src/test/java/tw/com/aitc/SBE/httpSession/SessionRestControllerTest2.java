@@ -40,5 +40,12 @@ public class SessionRestControllerTest2 {
 				entity,
 				String.class
 		);
+
+		ResponseEntity<String> result2 = restTemplate.exchange(
+				"http://localhost:8080/hello",
+				POST,
+				entity,
+				String.class
+		);
 	}
 }

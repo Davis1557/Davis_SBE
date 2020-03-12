@@ -2,23 +2,26 @@ package tw.com.aitc.SBE.Customer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping(value = "/customer")
 public class CustomerRestController {
 
 	@Autowired
 	private CustomerService service;
 
-	@GetMapping(value = "/{id}",
+	@GetMapping(value = "/customer/{id}",
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Customer get(@PathVariable String id) {
 		return service.findById(id);
+	}
+
+	@PostMapping(value = "/customer",
+			produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Customer> post(@RequestBody Customer customer) {
+		return ResponseEntity.ok(service.save(customer));
 	}
 }

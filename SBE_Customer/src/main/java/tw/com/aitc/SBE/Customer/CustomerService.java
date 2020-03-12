@@ -10,6 +10,10 @@ public class CustomerService {
 	CustomerRepository customerRepository;
 
 	public Customer findById(String id) {
-		return customerRepository.findById(id).orElse(null);
+		return customerRepository.findById(id).orElseThrow(() -> new CustomerNotFoundException(id));
+	}
+
+	public Customer save(Customer customer) {
+		return customerRepository.save(customer);
 	}
 }

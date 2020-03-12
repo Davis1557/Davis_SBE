@@ -13,9 +13,11 @@ public class ClientMain {
 
 	@Bean
 	public HttpInvokerProxyFactoryBean helloServiceInvoker() {
-		HttpInvokerProxyFactoryBean client = new HttpInvokerProxyFactoryBean();
-		client.setServiceUrl("http://localhost:8080/helloService");
-		client.setServiceInterface(HelloService.class);
-		return client;
+		HttpInvokerProxyFactoryBean invoker = new HttpInvokerProxyFactoryBean();
+		invoker.setServiceUrl("http://localhost:8080/helloService");
+		invoker.setServiceInterface(HelloService.class);
+		// 預設的 Pool ，可以 Extend SimpleHttpInvokerRequestExecutor 改寫
+		// invoker.setHttpInvokerRequestExecutor(new SimpleHttpInvokerRequestExecutor());
+		return invoker;
 	}
 }

@@ -17,6 +17,8 @@ public class Customer {
 	@Column(nullable = false)
 	private String name;
 
+	public Customer() {
+	}
 
 	public Customer(String id, String name) {
 		this.id = id;
