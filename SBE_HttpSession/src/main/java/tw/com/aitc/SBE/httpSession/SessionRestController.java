@@ -1,9 +1,12 @@
 package tw.com.aitc.SBE.httpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
 import java.util.Map;
@@ -12,6 +15,12 @@ import java.util.Map;
 @RequestMapping(value = "/")
 public class SessionRestController {
 	// Session 儲存方式看設定檔
+	@Autowired
+	ServletContext servletContext;
+
+	@Autowired
+	ApplicationContext applicationContext;
+
 
 	@GetMapping(value = "/test/{word}", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
