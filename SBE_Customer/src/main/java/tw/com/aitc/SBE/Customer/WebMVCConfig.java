@@ -10,6 +10,8 @@ public class WebMVCConfig implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new CusHandlerInterceptor())
-				.addPathPatterns("/customer/*");
+				.addPathPatterns("/customer/a");
+		registry.addInterceptor(new CusHandlerInterceptor())
+				.addPathPatterns("/customer/b");
 	}
 }
