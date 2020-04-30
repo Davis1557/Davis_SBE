@@ -12,8 +12,7 @@ public class CustomerRestController {
 	@Autowired
 	private CustomerService service;
 
-	@GetMapping(value = "/customer/{id}",
-			produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/customer/{id}")
 	@ResponseBody
 	public Customer get(@PathVariable String id) {
 		return service.findById(id);
