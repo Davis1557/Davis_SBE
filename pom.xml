@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.5.RELEASE</version>
+        <version>2.2.6.RELEASE</version>
         <relativePath/>
     </parent>
     <groupId>tw.com.aitc</groupId>
@@ -16,10 +16,11 @@
     <description>SBE</description>
 
     <modules>
+        <module>SBE_Java8Feature</module>
         <module>SBE_HttpSession</module>
         <module>SBE_Customer</module>
-        <module>SBE_Remote_Server</module>
         <module>SBE_Remote_Client</module>
+        <module>SBE_Remote_Server</module>
         <module>SBE_EurekaFeign</module>
         <module>SBE_EurekaServer</module>
         <module>SBE_EurekaService</module>
@@ -27,6 +28,7 @@
         <module>SBE_OAuth_ResourceServer</module>
         <module>SBE_OAuth_Client</module>
         <module>SBE_MongoDB</module>
+        <module>SBE_Integration</module>
     </modules>
 
     <properties>

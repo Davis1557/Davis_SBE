@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>SBE_Moving_1</artifactId>
+    <artifactId>SBE_Remote_Server</artifactId>
 
     <dependencies>
         <!-- Spring Boot : Rest Repositories -->
