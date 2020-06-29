@@ -27,12 +27,12 @@
 <!--        <module>SBE_EurekaZuul</module>-->
 <!--        <module>SBE_OAuth_ResourceServer</module>-->
 <!--        <module>SBE_OAuth_Client</module>-->
-        <module>SBE_MongoDB</module>
+<!--        <module>SBE_MongoDB</module>-->
 <!--        <module>SBE_Integration</module>-->
-<!--        <module>SBE_Axon_Command</module>-->
-<!--        <module>SBE_Axon_Query</module>-->
-<!--        <module>SBE_Axon_Command2</module>-->
-<!--        <module>SBE_Axon_Query2</module>-->
+        <module>SBE_Axon_Command</module>
+        <module>SBE_Axon_Query</module>
+        <module>SBE_Axon_Command2</module>
+        <module>SBE_Axon_Query2</module>
     </modules>
 
     <properties>
