@@ -12,6 +12,13 @@
     <artifactId>SBE_MongoDB</artifactId>
 
     <dependencies>
+        <!-- micrometer : prometheus -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+
         <!-- Spring Boot : Actuator -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

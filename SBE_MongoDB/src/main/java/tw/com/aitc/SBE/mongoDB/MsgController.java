@@ -1,5 +1,6 @@
 package tw.com.aitc.SBE.mongoDB;
 
+import io.micrometer.core.annotation.Timed;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -13,29 +14,31 @@ import java.util.Map;
 public class MsgController {
 
 	@Autowired
-	public MsgRepository repository;
+	public MsgService service;
 
-	@PostMapping(value = "/find/query")
-	public List<Map> findByQuery(@RequestBody Map<String, String> map) {
-		String query = map.get("query");
-		return repository.findByQuery(query);
+	@Timed(value = "davis.test.controller.find.query")
+	@PostMapping(value = "/find/query",
+			consumes = MediaType.TEXT_PLAIN_VALUE,
+			produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Map> findByQuery(@RequestBody String query) {
+		return service.findByQuery(query);
 	}
 
+	@Timed("davis.test.controller.insert.string")
 	@PostMapping(value = "/insert/string",
 			consumes = MediaType.TEXT_PLAIN_VALUE,
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	public String insertBodyString(@RequestBody String body) {
-		return repository.insertBodyString(body);
+		return service.insertBodyString(body);
 	}
 
 	@PostMapping(value = "/insert/json")
 	public String insertBodyJson(@RequestBody Document document) {
-		return repository.insertBodyJson(document);
+		return service.insertBodyJson(document);
 	}
 
 	@PutMapping(value = "/update/query")
-	public String updateByQuery(@RequestBody Map<String, String> map) {
-		String query = map.get("query");
-		return repository.updateByQuery(query);
+	public String updateByQuery(@RequestBody String query) {
+		return service.updateByQuery(query);
 	}
 }
