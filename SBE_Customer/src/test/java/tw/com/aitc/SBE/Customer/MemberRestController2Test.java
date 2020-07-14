@@ -34,7 +34,7 @@ public class MemberRestController2Test {
 		RestAssuredMockMvc.standaloneSetup(controller);
 	}
 
-	@Test
+//	@Test
 	void getOneCustomer() throws Exception {
 		// 從 ApplicationContext 取得目前 Bean 的情況
 		Map<String, Object> beansOfType = context.getBeansOfType(Object.class);
